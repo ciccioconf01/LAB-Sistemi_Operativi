@@ -1,0 +1,2 @@
+# SO
+lab sistemi operativi
