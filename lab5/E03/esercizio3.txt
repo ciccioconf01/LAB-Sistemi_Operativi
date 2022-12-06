@@ -1,0 +1,41 @@
+PUNTO1
+
+find . -name "*.exe" -size +1024c -executable
+
+PUNTO2
+
+find -path "*.c" -size +100c 
+
+PUNTO3
+
+find . -type f -regextype posix-extended -regex "(.*A.*a.*\..*)|(.*a.*A.*\..*)" -exec tail -n 3 '{}' \;
+
+PUNTO 4
+
+find . -mindepth 3 -maxdepth 5 -size +250c -user kali -regextype posix-extended -regex ".*\/....\..*" -exec wc -c '{}' \;
+
+Oppure
+
+find . -mindepth 3 -maxdepth 5 -size +250c -user kali -name "????.*" -exec wc -c '{}' \;
+
+PUNTO5
+
+find . -regextype posix-extended -regex ".*A.*zzz.*\...." -exec tar -cf '{}'.tar.gz '{}' /;
+
+PUNTO6
+
+find . -type d -regextype posix-extended -regex ".*/bin/.*" -exec ls -la '{}' /;
+
+PUNTO7
+
+find . -regextype posix-extended -regex ".*\.c" -group tty7 ! -user kali
+
+Oppure
+
+find / -name "*.c" ! -user quer
+
+PUNTO8
+
+find . -maxdepth 1 -exec chmod go-rwx '{}' /;
+
+
