@@ -1,0 +1,44 @@
+PUNTO1
+
+sort -rn  testoDaAnalizzare.txt  
+
+PUNTO2
+
+sort -k 2  testoDaAnalizzare.txt  
+
+PUNTO3
+
+grep "2011/2012" testoDaAnalizzare.txt
+
+PUNTO4
+
+grep "INF1T3" testoDaAnalizzare.txt | sort -n
+
+PUNTO5
+
+egrep -e "^[0-9]*2 " -e "^[0-9]*4 " testoDaAnalizzare.txt | sort -k 2
+
+PUNTO6
+
+grep "TLC1T3" testoDaAnalizzare.txt | grep "Da frequentare" | sort -rn
+
+PUNTO7
+
+egrep -e ".*A..A.*" testoDaAnalizzare.txt
+
+PUNTO8
+
+egrep -e "[A-Z]+A..A[A-Z]+" testoDaAnalizzare.txt
+
+PUNTO9
+
+cut -f 1 testoDaAnalizzare.txt -d " " |  tr -d 0 | tr 8 1 | sort -n | uniq
+
+PUNTO10
+
+cut -f 1 testoDaAnalizzare.txt -d " " |  tr -d 0 | tr 8 1 | sort -n | uniq -d -c
+
+
+
+
+
